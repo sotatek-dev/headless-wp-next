@@ -1,6 +1,10 @@
+'use client';
+
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+  const t = useTranslations('footer');
   return (
     <footer className="bg-gray-800 text-gray-300 py-16 px-6 w-full">
       <div className="max-w-6xl mx-auto">
@@ -9,7 +13,7 @@ export default function Footer() {
             <div className="mb-4">
               <Image src="/images/logo.png" alt="Sunwell Logo" width={150} height={50} />
             </div>
-            <p className="text-gray-400 mb-6 leading-relaxed">Sunwell - Năng lượng xanh cho tương lai bền vững</p>
+            <p className="text-gray-400 mb-6 leading-relaxed">{t('tagline')}</p>
             <div className="flex gap-4">
               <a
                 href="#"
@@ -41,14 +45,14 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="text-white text-lg font-semibold mb-6">Dịch vụ</h3>
+            <h3 className="text-white text-lg font-semibold mb-6">{t('services.title')}</h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href="#services"
                   className="text-gray-400 hover:text-orange-300 transition-all duration-300 inline-block hover:translate-x-1"
                 >
-                  Thiết kế CAD
+                  {t('services.cadDesign')}
                 </a>
               </li>
               <li>
@@ -56,7 +60,7 @@ export default function Footer() {
                   href="#services"
                   className="text-gray-400 hover:text-orange-300 transition-all duration-300 inline-block hover:translate-x-1"
                 >
-                  Tư vấn kỹ thuật
+                  {t('services.technicalConsulting')}
                 </a>
               </li>
               <li>
@@ -64,7 +68,7 @@ export default function Footer() {
                   href="#services"
                   className="text-gray-400 hover:text-orange-300 transition-all duration-300 inline-block hover:translate-x-1"
                 >
-                  Giải pháp năng lượng
+                  {t('services.energySolutions')}
                 </a>
               </li>
               <li>
@@ -72,20 +76,20 @@ export default function Footer() {
                   href="#services"
                   className="text-gray-400 hover:text-orange-300 transition-all duration-300 inline-block hover:translate-x-1"
                 >
-                  Đào tạo chuyên môn
+                  {t('services.professionalTraining')}
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-white text-lg font-semibold mb-6">Công ty</h3>
+            <h3 className="text-white text-lg font-semibold mb-6">{t('company.title')}</h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href="#about"
                   className="text-gray-400 hover:text-orange-300 transition-all duration-300 inline-block hover:translate-x-1"
                 >
-                  Về chúng tôi
+                  {t('company.aboutUs')}
                 </a>
               </li>
               <li>
@@ -93,7 +97,7 @@ export default function Footer() {
                   href="#jobs"
                   className="text-gray-400 hover:text-orange-300 transition-all duration-300 inline-block hover:translate-x-1"
                 >
-                  Tuyển dụng
+                  {t('company.careers')}
                 </a>
               </li>
               <li>
@@ -101,7 +105,7 @@ export default function Footer() {
                   href="#contact"
                   className="text-gray-400 hover:text-orange-300 transition-all duration-300 inline-block hover:translate-x-1"
                 >
-                  Liên hệ
+                  {t('company.contact')}
                 </a>
               </li>
               <li>
@@ -109,49 +113,49 @@ export default function Footer() {
                   href="#news"
                   className="text-gray-400 hover:text-orange-300 transition-all duration-300 inline-block hover:translate-x-1"
                 >
-                  Tin tức
+                  {t('company.news')}
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-white text-lg font-semibold mb-6">Liên hệ</h3>
+            <h3 className="text-white text-lg font-semibold mb-6">{t('contact.title')}</h3>
             <div className="space-y-3 text-sm">
               <p>
-                <strong className="text-white">Địa chỉ:</strong>
+                <strong className="text-white">{t('contact.address')}</strong>
                 <br />
-                123 Đường ABC, Quận XYZ, TP.HCM
+                {t('contact.addressText')}
               </p>
               <p>
-                <strong className="text-white">Điện thoại:</strong>
+                <strong className="text-white">{t('contact.phone')}</strong>
                 <br />
-                +84 123 456 789
+                {t('contact.phoneNumber')}
               </p>
               <p>
-                <strong className="text-white">Email:</strong>
+                <strong className="text-white">{t('contact.email')}</strong>
                 <br />
-                info@sunwell.vn
+                {t('contact.emailAddress')}
               </p>
               <p>
-                <strong className="text-white">Giờ làm việc:</strong>
+                <strong className="text-white">{t('contact.workingHours')}</strong>
                 <br />
-                8:00 - 17:00 (Thứ 2 - Thứ 6)
+                {t('contact.workingHoursText')}
               </p>
             </div>
           </div>
         </div>
         <div className="pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">&copy; 2024 Sunwell. Tất cả quyền được bảo lưu.</p>
+            <p className="text-gray-400 text-sm">&copy; 2024 Sunwell. {t('copyright')}</p>
             <div className="flex gap-6">
               <a href="#" className="text-gray-400 hover:text-orange-300 transition-colors duration-300 text-sm">
-                Điều khoản sử dụng
+                {t('termsOfUse')}
               </a>
               <a href="#" className="text-gray-400 hover:text-orange-300 transition-colors duration-300 text-sm">
-                Chính sách bảo mật
+                {t('privacyPolicy')}
               </a>
               <a href="#" className="text-gray-400 hover:text-orange-300 transition-colors duration-300 text-sm">
-                Cookie
+                {t('cookies')}
               </a>
             </div>
           </div>

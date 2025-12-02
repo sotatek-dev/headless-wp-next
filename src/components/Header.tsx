@@ -3,12 +3,15 @@
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from '../navigation';
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const router = useRouter();
   const headerRef = useRef<HTMLElement>(null);
+  const t = useTranslations('header');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,66 +61,72 @@ export default function Header() {
         >
           <Image src="/images/logo.png" alt="Sunwell Logo" width={100} height={100} />
         </div>
-        <nav className="hidden md:flex gap-8 items-center">
-          <a
-            href="#home"
-            className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 relative py-2 px-0 group"
-            id="nav-home"
+        <div className="hidden md:flex gap-6 items-center">
+          <nav className="flex gap-8 items-center">
+            <a
+              href="#home"
+              className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 relative py-2 px-0 group"
+              id="nav-home"
+            >
+              {t('home')}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-300 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a
+              href="#about"
+              className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 relative py-2 px-0 group"
+              id="nav-about"
+            >
+              {t('about')}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-300 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a
+              href="#jobs"
+              className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 relative py-2 px-0 group"
+              id="nav-jobs"
+            >
+              {t('jobs')}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-300 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a
+              href="#services"
+              className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 relative py-2 px-0 group"
+              id="nav-services"
+            >
+              {t('services')}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-300 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a
+              href="#apply"
+              className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 relative py-2 px-0 group"
+              id="nav-contact"
+            >
+              {t('contact')}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-300 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+          </nav>
+          <LanguageSwitcher />
+        </div>
+        <div className="md:hidden flex items-center gap-3">
+          <LanguageSwitcher />
+          <button
+            onClick={toggleMobileMenu}
+            className="p-2 focus:outline-none transition-colors duration-300 hover:bg-gray-100 rounded-md"
+            aria-label="Toggle mobile menu"
           >
-            Trang chủ
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-300 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a
-            href="#about"
-            className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 relative py-2 px-0 group"
-            id="nav-about"
-          >
-            Giới thiệu
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-300 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a
-            href="#jobs"
-            className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 relative py-2 px-0 group"
-            id="nav-jobs"
-          >
-            Tuyển dụng
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-300 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a
-            href="#services"
-            className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 relative py-2 px-0 group"
-            id="nav-services"
-          >
-            Dịch vụ
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-300 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a
-            href="#apply"
-            className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 relative py-2 px-0 group"
-            id="nav-contact"
-          >
-            Liên hệ
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-300 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-        </nav>
-        <button
-          onClick={toggleMobileMenu}
-          className="md:hidden p-2 focus:outline-none transition-colors duration-300 hover:bg-gray-100 rounded-md"
-          aria-label="Toggle mobile menu"
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className={`transition-all duration-300 ${isMobileMenuOpen ? 'text-orange-300' : 'text-gray-600'}`}
-          >
-            <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-            <path d="M3 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-            <path d="M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-        </button>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className={`transition-all duration-300 ${isMobileMenuOpen ? 'text-orange-300' : 'text-gray-600'}`}
+            >
+              <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              <path d="M3 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              <path d="M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -132,35 +141,35 @@ export default function Header() {
             onClick={closeMobileMenu}
             className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 py-2 border-b border-gray-100"
           >
-            Trang chủ
+            {t('home')}
           </a>
           <a
             href="#about"
             onClick={closeMobileMenu}
             className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 py-2 border-b border-gray-100"
           >
-            Giới thiệu
+            {t('about')}
           </a>
           <a
             href="#jobs"
             onClick={closeMobileMenu}
             className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 py-2 border-b border-gray-100"
           >
-            Tuyển dụng
+            {t('jobs')}
           </a>
           <a
             href="#services"
             onClick={closeMobileMenu}
             className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 py-2 border-b border-gray-100"
           >
-            Dịch vụ
+            {t('services')}
           </a>
           <a
             href="#apply"
             onClick={closeMobileMenu}
             className="text-gray-600 text-sm font-medium transition-all duration-300 hover:text-orange-300 py-2"
           >
-            Liên hệ
+            {t('contact')}
           </a>
         </nav>
       </div>

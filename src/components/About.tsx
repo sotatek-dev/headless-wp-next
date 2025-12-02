@@ -1,8 +1,14 @@
 'use client';
 
 import { useEffect } from 'react';
+import { HomeAbout } from '@/types/api';
 
-export default function About() {
+interface AboutProps {
+  aboutData: HomeAbout;
+  locale: string;
+}
+
+export default function About({ aboutData, locale }: AboutProps) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -27,15 +33,10 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center animate-on-scroll">
           <div className="about-text">
             <h2 className="text-4xl font-bold text-gray-800 mb-6" id="about-title">
-              Về Sunwell
+              {aboutData.title}
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6" id="about-description">
-              Chúng tôi là đơn vị tiên phong trong lĩnh vực năng lượng mặt trời và dịch vụ CAD outsourcing tại Việt Nam.
-              Với sứ mệnh mang đến giải pháp năng lượng sạch, bền vững cho mọi gia đình và doanh nghiệp.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Đội ngũ chuyên gia giàu kinh nghiệm của Sunwell luôn sẵn sàng đồng hành cùng khách hàng, từ tư vấn, thiết
-              kế, thi công đến bảo trì, đảm bảo mọi dự án đạt chất lượng cao nhất.
+            <p className="text-lg text-gray-600 leading-relaxed" id="about-description">
+              {aboutData.content}
             </p>
           </div>
           <div className="bg-linear-to-br from-gray-100 to-gray-200 rounded-3xl p-16 text-center shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105">

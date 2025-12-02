@@ -1,0 +1,163 @@
+{
+  "header": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "jobs": "Tuyển dụng",
+    "services": "Dịch vụ",
+    "contact": "Liên hệ"
+  },
+  "home": {
+    "careers": "Tuyển dụng",
+    "learnMore": "Tìm hiểu thêm"
+  },
+  "jobs": {
+    "subtitle": "Tham gia đội ngũ của chúng tôi và phát triển sự nghiệp",
+    "tabs": {
+      "all": "Tất cả",
+      "engineering": "Kỹ thuật",
+      "marketing": "Marketing",
+      "sales": "Kinh doanh",
+      "design": "Thiết kế"
+    },
+    "viewDetails": "Xem chi tiết",
+    "categories": {
+      "engineering": "Kỹ thuật",
+      "marketing": "Marketing",
+      "sales": "Kinh doanh",
+      "design": "Thiết kế"
+    },
+    "years": "năm",
+    "fullTime": "Toàn thời gian"
+  },
+  "services": {
+    "subtitle": "Giải pháp toàn diện cho nhu cầu của bạn",
+    "solar": {
+      "title": "Năng lượng mặt trời",
+      "description": "Hệ thống năng lượng mặt trời tiên tiến, giúp tiết kiệm chi phí điện năng và bảo vệ môi trường",
+      "features": {
+        "consultation": "Tư vấn và khảo sát miễn phí",
+        "design": "Thiết kế hệ thống tối ưu",
+        "installation": "Thi công chuyên nghiệp",
+        "warranty": "Bảo hành dài hạn 25 năm",
+        "support": "Hỗ trợ vận hành 24/7"
+      },
+      "cta": "Liên hệ tư vấn"
+    },
+    "cad": {
+      "title": "Thiết kế CAD Outsourcing",
+      "description": "Dịch vụ thiết kế CAD chuyên nghiệp, chất lượng cao với đội ngũ kỹ sư giàu kinh nghiệm",
+      "features": {
+        "design2d3d": "Thiết kế 2D/3D chuyên nghiệp",
+        "modeling": "Mô hình hóa sản phẩm",
+        "technical": "Bản vẽ kỹ thuật chi tiết",
+        "rendering": "Rendering và visualization",
+        "optimization": "Tối ưu chi phí và thời gian"
+      },
+      "cta": "Yêu cầu dịch vụ"
+    }
+  },
+  "jobDetails": {
+    "recruitmentInfo": "Thông tin tuyển dụng",
+    "jobDescription": "Mô tả công việc",
+    "qualifications": "Yêu cầu",
+    "salary": "Mức lương",
+    "salaryCompetitive": "Mức lương cạnh tranh dựa trên kinh nghiệm và năng lực",
+    "location": "Địa điểm",
+    "companyInfo": {
+      "title": "Thông tin công ty",
+      "name": "Công ty TNHH Sunwell",
+      "address": "123 Đường ABC, Quận 1, TP.HCM",
+      "phone": "Điện thoại",
+      "email": "Email",
+      "website": "Website",
+      "applyNow": "Ứng tuyển ngay"
+    }
+  },
+  "application": {
+    "title": "Ứng tuyển ngay",
+    "fullName": "Họ và tên",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "category": "Lĩnh vực",
+    "selectCategory": "Chọn lĩnh vực",
+    "categories": {
+      "engineering": "Kỹ thuật",
+      "marketing": "Marketing",
+      "sales": "Kinh doanh",
+      "design": "Thiết kế",
+      "other": "Khác"
+    },
+    "position": "Vị trí ứng tuyển",
+    "summary": "Giới thiệu ngắn về bản thân",
+    "cvUpload": "Tải lên CV (PDF)",
+    "cvUploadInstruction": "Kéo thả file PDF hoặc click để chọn",
+    "cvUploadLimit": "Chỉ chấp nhận file PDF, tối đa 5MB",
+    "notes": "Ghi chú thêm (không bắt buộc)",
+    "termsAgree": "Tôi đồng ý với",
+    "termsOfUse": "Điều khoản sử dụng",
+    "and": "và",
+    "privacyPolicy": "Chính sách bảo mật",
+    "ofSunwell": "của Sunwell",
+    "submit": "Gửi hồ sơ"
+  },
+  "applicationModal": {
+    "applyFor": "Ứng tuyển vào vị trí",
+    "fullName": "Họ và tên",
+    "fullNamePlaceholder": "Nhập họ và tên của bạn",
+    "email": "Địa chỉ Email",
+    "emailPlaceholder": "Nhập địa chỉ email của bạn",
+    "phone": "Số điện thoại",
+    "phonePlaceholder": "Nhập số điện thoại của bạn",
+    "resume": "CV/Hồ sơ",
+    "resumeFormats": "Định dạng chấp nhận: PDF, DOC, DOCX",
+    "coverLetter": "Thư xin việc",
+    "coverLetterPlaceholder": "Cho chúng tôi biết lý do bạn quan tâm đến vị trí này...",
+    "cancel": "Hủy",
+    "submit": "Gửi đơn ứng tuyển"
+  },
+  "companyInfo": {
+    "apply": "ỨNG TUYỂN",
+    "title": "Thông tin công ty",
+    "dateOfEstablishment": "Ngày thành lập",
+    "ceo": "Giám đốc điều hành",
+    "businessDetails": "Chi tiết kinh doanh",
+    "numberOfEmployees": "Số lượng nhân viên",
+    "capital": "Vốn điều lệ",
+    "amountOfSales": "Doanh thu",
+    "headquartersLocation": "Địa điểm trụ sở chính",
+    "branchOfficeLocation": "Địa điểm văn phòng chi nhánh",
+    "corporateSite": "Website công ty"
+  },
+  "footer": {
+    "tagline": "Sunwell - Năng lượng xanh cho tương lai bền vững",
+    "services": {
+      "title": "Dịch vụ",
+      "cadDesign": "Thiết kế CAD",
+      "technicalConsulting": "Tư vấn kỹ thuật",
+      "energySolutions": "Giải pháp năng lượng",
+      "professionalTraining": "Đào tạo chuyên môn"
+    },
+    "company": {
+      "title": "Công ty",
+      "aboutUs": "Về chúng tôi",
+      "careers": "Tuyển dụng",
+      "contact": "Liên hệ",
+      "news": "Tin tức"
+    },
+    "contact": {
+      "title": "Liên hệ",
+      "address": "Địa chỉ:",
+      "addressText": "123 Đường ABC, Quận XYZ, TP.HCM",
+      "phone": "Điện thoại:",
+      "phoneNumber": "+84 123 456 789",
+      "email": "Email:",
+      "emailAddress": "info@sunwell.vn",
+      "workingHours": "Giờ làm việc:",
+      "workingHoursText": "8:00 - 17:00 (Thứ 2 - Thứ 6)"
+    },
+    "copyright": "Tất cả quyền được bảo lưu.",
+    "termsOfUse": "Điều khoản sử dụng",
+    "privacyPolicy": "Chính sách bảo mật",
+    "cookies": "Cookie"
+  }
+}

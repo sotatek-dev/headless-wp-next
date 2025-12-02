@@ -1,8 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function Application() {
+  const t = useTranslations('application');
   const [formData, setFormData] = useState({
     fullname: '',
     email: '',
@@ -64,7 +66,7 @@ export default function Application() {
           onSubmit={handleSubmit}
         >
           <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center" id="form-title">
-            Ứng tuyển ngay
+            {t('title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="mb-6">
@@ -73,7 +75,7 @@ export default function Application() {
                 className="block text-base font-semibold text-gray-800 mb-2"
                 id="form-name-label"
               >
-                Họ và tên
+                {t('fullName')}
               </label>
               <input
                 type="text"
@@ -87,7 +89,7 @@ export default function Application() {
             </div>
             <div className="mb-6">
               <label htmlFor="email" className="block text-base font-semibold text-gray-800 mb-2" id="form-email-label">
-                Email
+                {t('email')}
               </label>
               <input
                 type="email"
@@ -101,7 +103,7 @@ export default function Application() {
             </div>
             <div className="mb-6">
               <label htmlFor="phone" className="block text-base font-semibold text-gray-800 mb-2" id="form-phone-label">
-                Số điện thoại
+                {t('phone')}
               </label>
               <input
                 type="tel"
@@ -119,7 +121,7 @@ export default function Application() {
                 className="block text-base font-semibold text-gray-800 mb-2"
                 id="form-category-label"
               >
-                Lĩnh vực
+                {t('category')}
               </label>
               <select
                 id="category"
@@ -129,12 +131,12 @@ export default function Application() {
                 onChange={handleInputChange}
                 required
               >
-                <option value="">Chọn lĩnh vực</option>
-                <option value="engineering">Kỹ thuật</option>
-                <option value="marketing">Marketing</option>
-                <option value="sales">Kinh doanh</option>
-                <option value="design">Thiết kế</option>
-                <option value="other">Khác</option>
+                <option value="">{t('selectCategory')}</option>
+                <option value="engineering">{t('categories.engineering')}</option>
+                <option value="marketing">{t('categories.marketing')}</option>
+                <option value="sales">{t('categories.sales')}</option>
+                <option value="design">{t('categories.design')}</option>
+                <option value="other">{t('categories.other')}</option>
               </select>
             </div>
             <div className="mb-6 md:col-span-2">
@@ -143,7 +145,7 @@ export default function Application() {
                 className="block text-base font-semibold text-gray-800 mb-2"
                 id="form-position-label"
               >
-                Vị trí ứng tuyển
+                {t('position')}
               </label>
               <input
                 type="text"
@@ -161,7 +163,7 @@ export default function Application() {
                 className="block text-base font-semibold text-gray-800 mb-2"
                 id="form-summary-label"
               >
-                Giới thiệu ngắn về bản thân
+                {t('summary')}
               </label>
               <textarea
                 id="summary"
@@ -174,15 +176,15 @@ export default function Application() {
             </div>
             <div className="mb-6 md:col-span-2">
               <label className="block text-base font-semibold text-gray-800 mb-2" id="form-cv-label">
-                Tải lên CV (PDF)
+                {t('cvUpload')}
               </label>
               <div
                 className="border-2 border-dashed border-gray-200 rounded-xl p-8 text-center transition-all duration-300 cursor-pointer hover:border-orange-300 hover:bg-orange-50"
                 id="cv-upload-area"
               >
                 <div className="text-5xl mb-3 opacity-60">📄</div>
-                <p className="text-base text-gray-600 mb-1">Kéo thả file PDF hoặc click để chọn</p>
-                <p className="text-sm text-gray-500">Chỉ chấp nhận file PDF, tối đa 5MB</p>
+                <p className="text-base text-gray-600 mb-1">{t('cvUploadInstruction')}</p>
+                <p className="text-sm text-gray-500">{t('cvUploadLimit')}</p>
               </div>
               <input type="file" id="cv-file" name="cv" className="hidden" accept=".pdf" onChange={handleFileChange} />
               {fileName && (
@@ -194,7 +196,7 @@ export default function Application() {
             </div>
             <div className="mb-6 md:col-span-2">
               <label htmlFor="notes" className="block text-base font-semibold text-gray-800 mb-2" id="form-notes-label">
-                Ghi chú thêm (không bắt buộc)
+                {t('notes')}
               </label>
               <textarea
                 id="notes"
@@ -221,15 +223,15 @@ export default function Application() {
               className="text-sm text-gray-600 leading-relaxed cursor-pointer"
               id="form-terms-label"
             >
-              Tôi đồng ý với{' '}
+              {t('termsAgree')}{' '}
               <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-300 hover:underline">
-                Điều khoản sử dụng
+                {t('termsOfUse')}
               </a>{' '}
-              và{' '}
+              {t('and')}{' '}
               <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-300 hover:underline">
-                Chính sách bảo mật
+                {t('privacyPolicy')}
               </a>{' '}
-              của Sunwell
+              {t('ofSunwell')}
             </label>
           </div>
           <button
@@ -237,7 +239,7 @@ export default function Application() {
             className="w-full bg-linear-to-r from-orange-300 to-orange-200 text-gray-800 px-8 py-4 rounded-xl text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             id="submit-button"
           >
-            <span id="submit-text">Gửi hồ sơ</span>
+            <span id="submit-text">{t('submit')}</span>
           </button>
           <div id="form-message"></div>
         </form>

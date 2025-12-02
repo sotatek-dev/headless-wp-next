@@ -1,5 +1,163 @@
 {
-  "Home": "Home",
-  "About": "About",
-  "Contact": "Contact"
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "jobs": "Careers",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "careers": "Careers",
+    "learnMore": "Learn More"
+  },
+  "jobs": {
+    "subtitle": "Join our team and develop your career",
+    "tabs": {
+      "all": "All",
+      "engineering": "Engineering",
+      "marketing": "Marketing",
+      "sales": "Sales",
+      "design": "Design"
+    },
+    "viewDetails": "View Details",
+    "categories": {
+      "engineering": "Engineering",
+      "marketing": "Marketing",
+      "sales": "Sales",
+      "design": "Design"
+    },
+    "years": "years",
+    "fullTime": "Full-time"
+  },
+  "services": {
+    "subtitle": "Comprehensive solutions for your needs",
+    "solar": {
+      "title": "Solar Energy",
+      "description": "Advanced solar energy systems that help save electricity costs and protect the environment",
+      "features": {
+        "consultation": "Free consultation and survey",
+        "design": "Optimal system design",
+        "installation": "Professional installation",
+        "warranty": "25-year long-term warranty",
+        "support": "24/7 operational support"
+      },
+      "cta": "Contact for consultation"
+    },
+    "cad": {
+      "title": "CAD Outsourcing Design",
+      "description": "Professional, high-quality CAD design services with an experienced team of engineers",
+      "features": {
+        "design2d3d": "Professional 2D/3D design",
+        "modeling": "Product modeling",
+        "technical": "Detailed technical drawings",
+        "rendering": "Rendering and visualization",
+        "optimization": "Cost and time optimization"
+      },
+      "cta": "Request service"
+    }
+  },
+  "jobDetails": {
+    "recruitmentInfo": "Recruitment Information",
+    "jobDescription": "Job Description",
+    "qualifications": "Qualifications",
+    "salary": "Salary",
+    "salaryCompetitive": "Competitive salary based on experience and qualifications",
+    "location": "Location",
+    "companyInfo": {
+      "title": "Company Information",
+      "name": "Sunwell Co., Ltd.",
+      "address": "123 ABC Street, District 1, HCMC",
+      "phone": "Phone",
+      "email": "Email",
+      "website": "Website",
+      "applyNow": "Apply Now"
+    }
+  },
+  "application": {
+    "title": "Apply Now",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "category": "Field",
+    "selectCategory": "Select Field",
+    "categories": {
+      "engineering": "Engineering",
+      "marketing": "Marketing",
+      "sales": "Sales",
+      "design": "Design",
+      "other": "Other"
+    },
+    "position": "Position Applying For",
+    "summary": "Brief Introduction About Yourself",
+    "cvUpload": "Upload CV (PDF)",
+    "cvUploadInstruction": "Drag and drop PDF file or click to select",
+    "cvUploadLimit": "Only PDF files accepted, max 5MB",
+    "notes": "Additional Notes (Optional)",
+    "termsAgree": "I agree with",
+    "termsOfUse": "Terms of Use",
+    "and": "and",
+    "privacyPolicy": "Privacy Policy",
+    "ofSunwell": "of Sunwell",
+    "submit": "Submit Application"
+  },
+  "applicationModal": {
+    "applyFor": "Apply for",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your full name",
+    "email": "Email Address",
+    "emailPlaceholder": "Enter your email address",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "resume": "Resume/CV",
+    "resumeFormats": "Accepted formats: PDF, DOC, DOCX",
+    "coverLetter": "Cover Letter",
+    "coverLetterPlaceholder": "Tell us why you're interested in this position...",
+    "cancel": "Cancel",
+    "submit": "Submit Application"
+  },
+  "companyInfo": {
+    "apply": "APPLY",
+    "title": "Company Information",
+    "dateOfEstablishment": "Date of establishment",
+    "ceo": "CEO",
+    "businessDetails": "Business details",
+    "numberOfEmployees": "Number of employees",
+    "capital": "Capital",
+    "amountOfSales": "Amount of sales",
+    "headquartersLocation": "Headquarters location",
+    "branchOfficeLocation": "Branch office location",
+    "corporateSite": "Corporate site"
+  },
+  "footer": {
+    "tagline": "Sunwell - Green energy for a sustainable future",
+    "services": {
+      "title": "Services",
+      "cadDesign": "CAD Design",
+      "technicalConsulting": "Technical Consulting",
+      "energySolutions": "Energy Solutions",
+      "professionalTraining": "Professional Training"
+    },
+    "company": {
+      "title": "Company",
+      "aboutUs": "About Us",
+      "careers": "Careers",
+      "contact": "Contact",
+      "news": "News"
+    },
+    "contact": {
+      "title": "Contact",
+      "address": "Address:",
+      "addressText": "123 ABC Street, XYZ District, HCMC",
+      "phone": "Phone:",
+      "phoneNumber": "+84 123 456 789",
+      "email": "Email:",
+      "emailAddress": "info@sunwell.vn",
+      "workingHours": "Working Hours:",
+      "workingHoursText": "8:00 AM - 5:00 PM (Monday - Friday)"
+    },
+    "copyright": "All rights reserved.",
+    "termsOfUse": "Terms of Use",
+    "privacyPolicy": "Privacy Policy",
+    "cookies": "Cookies"
+  }
 }

@@ -1,1 +1,163 @@
-{}
+{
+  "header": {
+    "home": "ホーム",
+    "about": "会社概要",
+    "jobs": "採用情報",
+    "services": "サービス",
+    "contact": "お問い合わせ"
+  },
+  "home": {
+    "careers": "採用情報",
+    "learnMore": "詳しく見る"
+  },
+  "jobs": {
+    "subtitle": "私たちのチームに参加してキャリアを発展させましょう",
+    "tabs": {
+      "all": "すべて",
+      "engineering": "エンジニアリング",
+      "marketing": "マーケティング",
+      "sales": "営業",
+      "design": "デザイン"
+    },
+    "viewDetails": "詳細を見る",
+    "categories": {
+      "engineering": "エンジニアリング",
+      "marketing": "マーケティング",
+      "sales": "営業",
+      "design": "デザイン"
+    },
+    "years": "年",
+    "fullTime": "フルタイム"
+  },
+  "services": {
+    "subtitle": "あなたのニーズに対する包括的なソリューション",
+    "solar": {
+      "title": "太陽エネルギー",
+      "description": "電気代の節約と環境保護に役立つ先進的な太陽エネルギーシステム",
+      "features": {
+        "consultation": "無料相談と調査",
+        "design": "最適なシステム設計",
+        "installation": "プロフェッショナルな設置",
+        "warranty": "25年間の長期保証",
+        "support": "24時間365日のサポート"
+      },
+      "cta": "相談する"
+    },
+    "cad": {
+      "title": "CADアウトソーシング設計",
+      "description": "経験豊富なエンジニアチームによるプロフェッショナルで高品質なCAD設計サービス",
+      "features": {
+        "design2d3d": "プロフェッショナルな2D/3D設計",
+        "modeling": "製品モデリング",
+        "technical": "詳細な技術図面",
+        "rendering": "レンダリングとビジュアライゼーション",
+        "optimization": "コストと時間の最適化"
+      },
+      "cta": "サービスを依頼"
+    }
+  },
+  "jobDetails": {
+    "recruitmentInfo": "採用情報",
+    "jobDescription": "職務内容",
+    "qualifications": "応募資格",
+    "salary": "給与",
+    "salaryCompetitive": "経験と資格に基づく競争力のある給与",
+    "location": "勤務地",
+    "companyInfo": {
+      "title": "会社情報",
+      "name": "Sunwell株式会社",
+      "address": "ホーチミン市1区ABC通り123番地",
+      "phone": "電話",
+      "email": "メール",
+      "website": "ウェブサイト",
+      "applyNow": "今すぐ応募"
+    }
+  },
+  "application": {
+    "title": "今すぐ応募",
+    "fullName": "氏名",
+    "email": "メールアドレス",
+    "phone": "電話番号",
+    "category": "分野",
+    "selectCategory": "分野を選択",
+    "categories": {
+      "engineering": "エンジニアリング",
+      "marketing": "マーケティング",
+      "sales": "営業",
+      "design": "デザイン",
+      "other": "その他"
+    },
+    "position": "応募職種",
+    "summary": "自己紹介",
+    "cvUpload": "履歴書アップロード（PDF）",
+    "cvUploadInstruction": "PDFファイルをドラッグ＆ドロップまたはクリックして選択",
+    "cvUploadLimit": "PDFファイルのみ、最大5MB",
+    "notes": "備考（任意）",
+    "termsAgree": "私は",
+    "termsOfUse": "利用規約",
+    "and": "と",
+    "privacyPolicy": "プライバシーポリシー",
+    "ofSunwell": "に同意します",
+    "submit": "応募する"
+  },
+  "applicationModal": {
+    "applyFor": "応募職種：",
+    "fullName": "氏名",
+    "fullNamePlaceholder": "氏名を入力してください",
+    "email": "メールアドレス",
+    "emailPlaceholder": "メールアドレスを入力してください",
+    "phone": "電話番号",
+    "phonePlaceholder": "電話番号を入力してください",
+    "resume": "履歴書/CV",
+    "resumeFormats": "対応形式：PDF、DOC、DOCX",
+    "coverLetter": "志望動機",
+    "coverLetterPlaceholder": "この職種に興味を持った理由をお聞かせください...",
+    "cancel": "キャンセル",
+    "submit": "応募する"
+  },
+  "companyInfo": {
+    "apply": "応募する",
+    "title": "会社情報",
+    "dateOfEstablishment": "設立年月日",
+    "ceo": "代表取締役",
+    "businessDetails": "事業内容",
+    "numberOfEmployees": "従業員数",
+    "capital": "資本金",
+    "amountOfSales": "売上高",
+    "headquartersLocation": "本社所在地",
+    "branchOfficeLocation": "支店所在地",
+    "corporateSite": "コーポレートサイト"
+  },
+  "footer": {
+    "tagline": "Sunwell - 持続可能な未来のためのグリーンエネルギー",
+    "services": {
+      "title": "サービス",
+      "cadDesign": "CAD設計",
+      "technicalConsulting": "技術コンサルティング",
+      "energySolutions": "エネルギーソリューション",
+      "professionalTraining": "専門研修"
+    },
+    "company": {
+      "title": "企業情報",
+      "aboutUs": "会社概要",
+      "careers": "採用情報",
+      "contact": "お問い合わせ",
+      "news": "ニュース"
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "address": "住所：",
+      "addressText": "ベトナム、ホーチミン市XYZ区ABC通り123番地",
+      "phone": "電話：",
+      "phoneNumber": "+84 123 456 789",
+      "email": "メール：",
+      "emailAddress": "info@sunwell.vn",
+      "workingHours": "営業時間：",
+      "workingHoursText": "8:00～17:00（月曜日～金曜日）"
+    },
+    "copyright": "全著作権所有。",
+    "termsOfUse": "利用規約",
+    "privacyPolicy": "プライバシーポリシー",
+    "cookies": "クッキー"
+  }
+}

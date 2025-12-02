@@ -1,8 +1,8 @@
 import createMiddleware from 'next-intl/middleware';
 
-export default createMiddleware({
+const proxy = createMiddleware({
   // A list of all locales that are supported
-  locales: ['en', 'jp'],
+  locales: ['en', 'jp', 'vi'],
 
   // Used when no locale matches
   defaultLocale: 'jp',
@@ -11,5 +11,7 @@ export default createMiddleware({
 export const config = {
   // Match all pathnames except for
   // - API routes, Next.js internals, and static files
-  matcher: ['/((?!api|_next|_vercel|favicon.ico|.*\\..*).*)'],
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
 };
+
+export default proxy;

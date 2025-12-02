@@ -1,4 +1,7 @@
+'use client';
+
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface ApplicationModalProps {
   isOpen: boolean;
@@ -7,6 +10,7 @@ interface ApplicationModalProps {
 }
 
 export default function ApplicationModal({ isOpen, onClose, jobTitle }: ApplicationModalProps) {
+  const t = useTranslations('applicationModal');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,8 +31,7 @@ export default function ApplicationModal({ isOpen, onClose, jobTitle }: Applicat
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Application submitted:', formData);
+    // TODO: Handle form submission here
     onClose();
   };
 
@@ -39,7 +42,9 @@ export default function ApplicationModal({ isOpen, onClose, jobTitle }: Applicat
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
         <div className="p-8">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">Apply for {jobTitle}</h2>
+            <h2 className="text-2xl font-bold text-gray-900">
+              {t('applyFor')} {jobTitle}
+            </h2>
             <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-2xl font-bold cursor-pointer">
               ×
             </button>
@@ -48,7 +53,7 @@ export default function ApplicationModal({ isOpen, onClose, jobTitle }: Applicat
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                Full Name *
+                {t('fullName')} *
               </label>
               <input
                 type="text"
@@ -58,13 +63,13 @@ export default function ApplicationModal({ isOpen, onClose, jobTitle }: Applicat
                 value={formData.name}
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                placeholder="Enter your full name"
+                placeholder={t('fullNamePlaceholder')}
               />
             </div>
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Email Address *
+                {t('email')} *
               </label>
               <input
                 type="email"
@@ -74,13 +79,13 @@ export default function ApplicationModal({ isOpen, onClose, jobTitle }: Applicat
                 value={formData.email}
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                placeholder="Enter your email address"
+                placeholder={t('emailPlaceholder')}
               />
             </div>
 
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number
+                {t('phone')}
               </label>
               <input
                 type="tel"
@@ -89,13 +94,13 @@ export default function ApplicationModal({ isOpen, onClose, jobTitle }: Applicat
                 value={formData.phone}
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                placeholder="Enter your phone number"
+                placeholder={t('phonePlaceholder')}
               />
             </div>
 
             <div className="cursor-pointer">
               <label htmlFor="resume" className="block text-sm font-medium text-gray-700 mb-2 cursor-pointer">
-                Resume/CV *
+                {t('resume')} *
               </label>
               <input
                 type="file"
@@ -106,12 +111,12 @@ export default function ApplicationModal({ isOpen, onClose, jobTitle }: Applicat
                 onChange={handleFileChange}
                 className=" cursor-pointer w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100"
               />
-              <p className="text-sm text-gray-500 mt-1">Accepted formats: PDF, DOC, DOCX</p>
+              <p className="text-sm text-gray-500 mt-1">{t('resumeFormats')}</p>
             </div>
 
             <div>
               <label htmlFor="coverLetter" className="block text-sm font-medium text-gray-700 mb-2">
-                Cover Letter
+                {t('coverLetter')}
               </label>
               <textarea
                 id="coverLetter"
@@ -120,7 +125,7 @@ export default function ApplicationModal({ isOpen, onClose, jobTitle }: Applicat
                 value={formData.coverLetter}
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-vertical"
-                placeholder="Tell us why you're interested in this position..."
+                placeholder={t('coverLetterPlaceholder')}
               />
             </div>
 
@@ -130,14 +135,14 @@ export default function ApplicationModal({ isOpen, onClose, jobTitle }: Applicat
                 onClick={onClose}
                 className="cursor-pointer flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-300"
               >
-                Cancel
+                {t('cancel')}
               </button>
               <button
                 type="submit"
                 className="cursor-pointer flex-1 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-semibold transition-colors duration-300"
                 style={{ backgroundColor: 'rgb(238, 103, 10)' }}
               >
-                Submit Application
+                {t('submit')}
               </button>
             </div>
           </form>

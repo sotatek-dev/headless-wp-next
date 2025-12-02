@@ -1,14 +1,19 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import { HeroSliderItem } from '@/types/api';
 
-export default function Hero() {
-  const slides = ['/images/slide_1.webp', '/images/slide_2.webp', '/images/slide_3.webp', '/images/slide_4.webp'];
+interface HeroProps {
+  heroData: HeroSliderItem[];
+  locale: string;
+}
+
+export default function Hero({ heroData, locale }: HeroProps) {
+  const t = useTranslations('home');
 
   return (
     <section
@@ -23,10 +28,10 @@ export default function Hero() {
             className="text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight tracking-tight"
             id="hero-title"
           >
-            Năng lượng xanh cho tương lai
+            {heroData[0]?.title}
           </h1>
           <p className="text-xl text-gray-600 mb-9 leading-relaxed" id="hero-subtitle">
-            Giải pháp năng lượng mặt trời và dịch vụ CAD chuyên nghiệp, tiên phong cho một tương lai bền vững
+            {heroData[0]?.subtitle}
           </p>
           <div className="flex gap-4 flex-wrap">
             <a
@@ -34,14 +39,14 @@ export default function Hero() {
               className="bg-linear-to-r from-orange-300 to-orange-200 text-gray-800 px-9 py-4 rounded-full text-base font-semibold cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               id="hero-cta-primary"
             >
-              Tuyển dụng
+              {t('careers')}
             </a>
             <a
               href="#about"
               className="bg-transparent text-gray-600 px-9 py-4 rounded-full text-base font-semibold cursor-pointer border-2 border-gray-200 transition-all duration-300 hover:border-orange-300 hover:text-orange-300 hover:bg-orange-50"
               id="hero-cta-secondary"
             >
-              Tìm hiểu thêm
+              {t('learnMore')}
             </a>
           </div>
         </div>
@@ -56,12 +61,12 @@ export default function Hero() {
             loop={true}
             className="w-full h-96 rounded-2xl overflow-hidden shadow-xl"
           >
-            {slides.map((slide, index) => (
+            {heroData.map((slide, index) => (
               <SwiperSlide key={index}>
                 <div className="relative w-full h-full">
                   <Image
-                    src={slide}
-                    alt={`Slide ${index + 1}`}
+                    src={slide.image || '/images/slide_1.webp'}
+                    alt={slide.title}
                     fill
                     className="object-cover rounded-2xl"
                     sizes="(max-width: 768px) 100vw, 50vw"

@@ -1,8 +1,20 @@
 'use client';
 
 import { useEffect } from 'react';
+import { HomeStat } from '@/types/api';
 
-export default function Stats() {
+interface StatsProps {
+  statsData: HomeStat[];
+  locale: string;
+}
+
+export default function Stats({ statsData, locale }: StatsProps) {
+  const getStatValue = (stat: HomeStat) => {
+    if (stat.type === 'plain_text') {
+      return stat.text;
+    }
+    return `${stat.number}${stat.affix_value}`;
+  };
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -24,22 +36,12 @@ export default function Stats() {
   return (
     <section className="bg-linear-to-r from-orange-300 to-orange-200 py-16 px-6 w-full">
       <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
-        <div className="text-center animate-on-scroll">
-          <div className="text-5xl font-bold text-gray-800 mb-2">500+</div>
-          <div className="text-lg text-gray-700 font-medium">Khách hàng</div>
-        </div>
-        <div className="text-center animate-on-scroll">
-          <div className="text-5xl font-bold text-gray-800 mb-2">1200+</div>
-          <div className="text-lg text-gray-700 font-medium">Dự án hoàn thành</div>
-        </div>
-        <div className="text-center animate-on-scroll">
-          <div className="text-5xl font-bold text-gray-800 mb-2">25 năm</div>
-          <div className="text-lg text-gray-700 font-medium">Bảo hành</div>
-        </div>
-        <div className="text-center animate-on-scroll">
-          <div className="text-5xl font-bold text-gray-800 mb-2">99%</div>
-          <div className="text-lg text-gray-700 font-medium">Hài lòng</div>
-        </div>
+        {statsData.map((stat, index) => (
+          <div key={index} className="text-center animate-on-scroll">
+            <div className="text-5xl font-bold text-gray-800 mb-2">{getStatValue(stat)}</div>
+            <div className="text-lg text-gray-700 font-medium">{stat.description}</div>
+          </div>
+        ))}
       </div>
     </section>
   );
